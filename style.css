@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    
+}
+
+body {
+    background-image: linear-gradient(lightblue, lightcoral);
+    background-attachment: fixed;
+}
+
+
+
+h1{
+    text-align: center;
+    
+}
+.box{
+    text-align: center;
+    width: 1100px;
+    margin: auto;
+    justify-content: center;
+    /* border: 2px solid rgb(255, 255, 255); */
+    border-radius: 30px;
+}
+
+
+
+.footer1 footer p{
+    align-content: center;
+    padding-left: 571px;
+padding-top: 116px;
+}
+
+h3{
+    padding-left: 450px;
+    padding-top: 25px;
+    font-family:'Dancing Script', cursive;
+}
+
+

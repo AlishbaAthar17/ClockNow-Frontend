@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="index1.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51" crossorigin="anonymous">
+
+    <title>ClockNow</title>
+    <script>
+        let a;
+        let date;
+        let time;
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        setInterval(() => {
+            a = new Date();
+            date = a.toLocaleDateString(undefined, options);
+            time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+            document.getElementById('time').innerHTML = time + "<br> on " + date;
+        }, 1000);
+
+        function ChangeColor() {
+            document.getElementById('firstButton').style.backgroundColor = 'lightcoral';
+            setTimeout("ChangeColor2()", 500);
+
+        }
+        function ChangeColor2() {
+            document.getElementById('firstButton').style.backgroundColor = 'lightblue';
+
+        }
+        function ChangeColor3() {
+            document.getElementById('secondButton').style.backgroundColor = 'lightcoral';
+            setTimeout("ChangeColor4()", 500);
+
+        }
+        function ChangeColor4() {
+            document.getElementById('secondButton').style.backgroundColor = 'lightblue';
+
+        }
+
+        function submitFunction() {
+            
+            
+            document.getElementById('message').innerHTML= "Your Time is " + document.getElementById('formGroupExampleInput').value + " on " + document.getElementById('formGroupExampleInput2').value;
+
+        }
+        
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="font-size: 27px;">ClockNow</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" >
+                        <a class="nav-link active" aria-current="page" href="PROJECT1.html"
+                            style="padding-right: 27px; font-family: 'Dancing Script', cursive;font-size: 27px;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#aboutSection"
+                            style="padding-right: 14px;font-family: 'Dancing Script', cursive;font-size: 27px;">About</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold" style="font-family: 'Roboto', sans-serif;">Currently, it's <span
+                        id="time"></span></h1>
+                <hr>
+                <p class="col-md-8 fs-4"
+                    style="font-family: 'Dancing Script', cursive;font-size: 27px;padding-left: 406px;">Time waits for
+                    no one</p>
+                <!-- <div class="btn" style="padding-left: 448px; border-width: zero; background: none;"> -->
+
+            </div>
+            <a href="#inputSection1">
+                <button id="firstButton" onmouseover="ChangeColor()" type="button" class="btn btn-primary" style="margin-left: 468px;background-color: lightblue;
+                color: rgb(27, 44, 44);
+                border: none;">Add Time</button>
+            </a>
+
+        </div>
+    </div>
+
+    <a name="inputSection1">
+    <div class="timeinput" style="margin-top: 350px; font-family: 'Roboto', sans-serif;">
+        <h1>Add your time!</h1>
+    </div>
+    <div class="mb-3" style="padding: 0px 466px;
+    padding-top: 0px;
+  padding-top: 33px;">
+        <label for="formGroupExampleInput" class="form-label" style="font-family: 'Dancing Script', cursive;font-size: 27px;">Time</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="HH:MM:SS">
+      </div>
+      <div class="mb-3" style="padding: 0px 466px;">
+        <label for="formGroupExampleInput2" class="form-label" style="font-family: 'Dancing Script', cursive;font-size: 27px;">Day</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="YYYY/MM/DD">
+      </div>
+    </a>
+    
+
+    <button id="secondButton" onmouseover="ChangeColor3()" onclick="submitFunction()" type="button" class="btn btn-primary" style="margin-left: 631px;background-color: lightblue;
+                color: rgb(27, 44, 44);
+                border: none;">Submit</button>
+    
+    <h3 id="message"></h3>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <a name="aboutSection">
+        <div class="container" style="margin-top: 66px;">
+            <h1 style="font-family: 'Roboto', sans-serif;">About Us</h1><br>
+            <div class="box" style="font-family: 'Dancing Script', cursive;font-size: 27px;">This website is specifically designed for demonstrating the time zone in a specific region. We ensure that our users donot face any unresponsiveness and experience a user-friendly time while they are analysing this website. Users can also add their own time-zones, of that specific time only. Their entries will be displayed temporarily on the website. This is just for fun. </div>
+        </div>
+    </a>
+
+
+    <div class="footer1">
+        <footer>
+            <p>&copy All Rights Reserved | 2023</p>
+        </footer>
+    </div>
+</body>
+
+</html>
